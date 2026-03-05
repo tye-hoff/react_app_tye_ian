@@ -1,10 +1,12 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./components/App/App.jsx";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./components/App/App";
+import { HealthProvider } from "./context/HealthContext";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <HealthProvider>
+      <App />
+    </HealthProvider>
+  </React.StrictMode>,
 );
