@@ -1,0 +1,35 @@
+.health-card {
+  background: lightskyblue;
+
+  border-radius: 8px;
+  padding: 20px;
+
+  border: 1px solid var(--border-color);
+
+  box-shadow: var(--shadow-soft);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.health-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.health-card-header h3 {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.health-card-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.health-card-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}

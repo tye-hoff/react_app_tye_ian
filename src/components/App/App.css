@@ -1,21 +1,152 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.page-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.page-description {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: var(--accent);
+}
+
+.severity-value {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.primary-button,
+.danger-button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition:
+    background-color 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.primary-button {
+  background: var(--accent);
+  color: white;
+}
+
+.primary-button:hover {
+  background: var(--accent-hover);
+}
+
+.danger-button {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.danger-button:hover {
+  background: #fecaca;
+}
+
+.empty-state {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.symptom-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.symptom-item {
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fafafa;
+}
+
+.symptom-item-top,
+.symptom-item-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.symptom-item-top {
+  margin-bottom: 8px;
+}
+
+.symptom-item-top h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.symptom-item p {
+  margin: 0 0 12px;
+  color: var(--text-secondary);
+}
+
+.symptom-item-bottom small {
+  color: var(--text-secondary);
+}
+
+.severity-badge {
+  background: #ede9fe;
+  color: #5b21b6;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 @keyframes logo-spin {

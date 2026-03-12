@@ -20,6 +20,7 @@ export default function App() {
       <main className="app-container">
         <Routes>
           <Route path="/" element={<Dashboard />} />
+
           <Route path="/symptoms" element={<Symptoms />} />
           <Route path="/medications" element={<Medications />} />
           <Route path="/appointments" element={<Appointments />} />
